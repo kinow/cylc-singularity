@@ -2,16 +2,16 @@ BootStrap: docker
 FROM: ubuntu:16.04
 
 %help
-	This container runs Cylc 7.8.1.
+    This container runs Cylc 7.8.1.
 
 %labels
     Maintainer Bruno P. Kinoshita
     Version 0.1
     Cylc_Version 7.8.1
-	Python_Version 2.7.12
+    Python_Version 2.7.12
 
 %post
-	apt-get update && apt-get --no-install-recommends -y install \
+    apt-get update && apt-get --no-install-recommends -y install \
         at \
         build-essential \
         git \
@@ -31,9 +31,9 @@ FROM: ubuntu:16.04
         pycodestyle \
         pyopenssl
 
-	git clone --branch 7.8.1 https://github.com/cylc/cylc.git /opt/cylc/
+    git clone --branch 7.8.1 https://github.com/cylc/cylc.git /opt/cylc/
 
-	cp /opt/cylc/usr/bin/cylc /usr/local/bin/cylc
+    cp /opt/cylc/usr/bin/cylc /usr/local/bin/cylc
 
 %runscript
-	exec /usr/local/bin/cylc "$@"
+    exec /usr/local/bin/cylc "$@"
