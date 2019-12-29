@@ -11,7 +11,7 @@ See [this repository](https://github.com/kinow/cylc-docker) for Docker images.
 Once the command is done, you should have a binary called `cylc-7.8.1.simg`. You can
 then execute Cylc with
 
-	./cylc-7.8.1.simg check-software
+    ./cylc-7.8.1.simg check-software
 
 Or even register suites, and run Cylc as you would normally run it. You can rename it to `cylc`
 and store somewhere in your `$PATH`, without having to really install Cylc.
